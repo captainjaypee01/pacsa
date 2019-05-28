@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'adidasBlock';
+    src: url('../fonts/Adidas.otf');
+}
+
+@font-face {
+    font-family: 'adineue';
+    src: url('../fonts/adineuePROKZ-Black.ttf');
+}
+
+body{
+    background-image: url('../img/tr-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1,h2,h3,h4,
+h5,h6,p, label{
+    font-family: 'adidasBlock';
+}

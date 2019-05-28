@@ -1,0 +1,62 @@
+.card {
+    font-family: 'adidasBlock';
+}
+
+.modal-title{
+    color:#fff;
+}
+
+.table-admin{
+    margin-bottom: 50px;
+    height: 300px;
+    /* table-layout: fixed; */
+}
+
+/* .table-admin thead tr {
+    display: block;
+}
+
+.table-admin tbody {
+    display: block;
+   
+    overflow: auto;
+    height: 450px;
+}
+
+.table-admin th, td {
+    
+} */
+
+.section-wrapper .card .card-header {
+    background: #1a5d27;
+    color: #fff;
+    font-family: 'adidasBlock';
+}
+
+.section-wrapper ul .nav-item .nav-link.active {
+    background: #1a5d27;
+}
+
+.section-wrapper ul .nav-item .nav-link {
+    color: #ffc600;
+    font-family: 'AdidasBlock';
+    font-size: 20px;
+}
+
+.swal-text {
+    font-family: 'AdidasBlock';
+    font-size: 20px;
+}
+
+.unpaid_wrapper{
+    background: #1a5d27;
+}
+
+.walk-in_wrapper,
+.modal-header,
+.modal-body{
+    background: #1a5d27;
+    -webkit-box-shadow: 10px 15px 13px -12px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 15px 13px -12px rgba(0,0,0,0.75);
+    box-shadow: 10px 15px 13px -12px rgba(0,0,0,0.75)
+}
