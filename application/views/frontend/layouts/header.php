@@ -11,16 +11,16 @@
         <meta name="author" content="John Paul Dala">
 
         <title>PACSA</title>
+        <link rel="stylesheet" href="<?= base_url() ?>assets/frontend/vendor/css/global.css">
         <link rel="stylesheet" href="<?= base_url() ?>assets/frontend/custom/css/custom.css">
         <link rel="stylesheet" href="<?= base_url() ?>assets/frontend/custom/css/forms.css">
-        <link rel="stylesheet" href="<?= base_url() ?>assets/frontend/vendor/css/global.css">
         <link rel="stylesheet" href="<?= base_url() ?>assets/frontend/vendor/css/media-queries.css">
         <link rel="stylesheet" href="<?= base_url() ?>assets/frontend/vendor/css/fontawesome.css">
         <link rel="stylesheet" href="<?= base_url() ?>assets/frontend/css/bootstrap.min.css">
         <script src="<?= base_url() ?>assets/frontend/vendor/js/sweetalert.js"></script>
         <script src="<?= base_url() ?>assets/frontend/vendor/js/jquery-3.3.1.slim.min.js"></script>
         <script src="<?= base_url() ?>assets/frontend/vendor/js/ajax.js"></script>
-        <script src="<?= base_url() ?>assets/frontend/custom/js/custom.js"></script>
+        <script src="<?= base_url() ?>assets/frontend/js/bootstrap.min.js"></script>
     </head>
 
     <body>
