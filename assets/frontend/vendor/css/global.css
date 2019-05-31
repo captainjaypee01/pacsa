@@ -1,20 +1,21 @@
-@font-face {
-    font-family: 'adidasBlock';
-    src: url('../fonts/Adidas.otf');
+@font-face{
+    font-family: 'fibre';
+    src: url('../fonts/fibre-font.woff');
 }
 
 @font-face {
-    font-family: 'adineue';
-    src: url('../fonts/adineuePROKZ-Black.ttf');
+    font-family: 'futura';
+    src: url('../fonts/FuturaHeavy.ttf');
 }
 
-body{
-    background-image: url('../img/tr-bg.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
+h1{
+    font-family: 'fibre';
 }
 
-h1,h2,h3,h4,
-h5,h6,p, label{
-    font-family: 'adineue';
+h2,h3,h4,h5,h6,
+p, button, th,td,tr{
+    font-family: 'futura';
 }
+
+
+

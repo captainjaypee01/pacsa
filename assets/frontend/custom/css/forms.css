@@ -15,7 +15,7 @@
     background: transparent;
     border: 0;
     border-bottom: 1px solid #ffc600;
-    font-family: 'adineue';
+    font-family: 'fibre';
     padding-bottom: 10px;
     outline: 0;
     width: 100%;
@@ -26,7 +26,7 @@
     background-color: transparent;
     border: 0;
     border-bottom: 1px solid #ffc600;
-    font-family: 'adineue';
+    font-family: 'fibre';
     outline: 0;
 }
 
@@ -43,5 +43,5 @@
 .form-check-label,
 .form-label_w {
     color: #000 !important;
-    font-family: 'adidasBlock';
+    font-family: 'fibre';
 }

@@ -194,4 +194,6 @@ var btn_prev_reg = function(){
     $("#section-school").show();
     $("#section-type").hide();
     $("#school-id").val("");
+    $("#section-reg1").hide();
+    $("#section-reg2").html("");
 }

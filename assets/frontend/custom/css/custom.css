@@ -1,5 +1,76 @@
+/* Section 1 */
+.section1{
+    background-image: url('../../vendor/img/banner.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: initial;
+    width: 100%;
+}
+
+.section1 .date{
+    background: url('../../vendor/img/date-bg.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
+    color: #e3c01c;
+    text-shadow: 2px 3px #5f4724;
+    text-align: center;
+    padding: 10px !important;
+}
+
+.section1 .btn-download{
+    background-color: #d4a819;
+    border: 2px solid #62401d;
+    color: #2e7e32;
+    font-family: 'fibre';
+}
+
+/* Section 2 */
+
+.section2{
+    background-image: url('../../vendor/img/section2-banner.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* Section 3 */
+
+.section3{
+    background-color: #2e7e32;
+}
+
+/* Section 4 */
+
+.section4{
+    background-color: #f5f5f5;
+}
+
+/* Section 5 */
+.section5{
+    background-image: url('../../vendor/img/banner-leaves.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.section5 .nav-link {
+    background: #d4a819;
+    color: #fff;
+    font-family: 'futura';
+    margin: 0px 10px;
+}
+
+.section5 .nav .nav-item .nav-link.active {
+    background: #2e7e32;
+    color: #fff;
+    font-family: 'futura';
+    margin: 0px 10px;
+}
 .card {
-    font-family: 'adidasBlock';
+    font-family: 'futura';
 }
 
 .modal-title{
@@ -30,7 +101,7 @@
 .section-wrapper .card .card-header {
     background: #1a5d27;
     color: #000;
-    font-family: 'adidasBlock';
+    font-family: 'futura';
 }
 
 .section-wrapper ul .nav-item .nav-link.active {
@@ -39,12 +110,12 @@
 
 .section-wrapper ul .nav-item .nav-link {
     color: #ffc600;
-    font-family: 'AdidasBlock';
+    font-family: 'futura';
     font-size: 20px;
 }
 
 .swal-text {
-    font-family: 'AdidasBlock';
+    font-family: 'futura';
     font-size: 20px;
 }
 

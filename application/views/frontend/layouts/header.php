@@ -16,17 +16,19 @@
         <link rel="stylesheet" href="<?= base_url() ?>assets/frontend/custom/css/forms.css">
         <link rel="stylesheet" href="<?= base_url() ?>assets/frontend/vendor/css/media-queries.css">
         <link rel="stylesheet" href="<?= base_url() ?>assets/frontend/vendor/css/fontawesome.css">
+        <link rel="stylesheet" href="<?= base_url() ?>assets/frontend/custom/css/typography.css">
+        <link rel="stylesheet" href="<?= base_url() ?>assets/frontend/custom/css/header-footer.css">
         <link rel="stylesheet" href="<?= base_url() ?>assets/frontend/css/bootstrap.min.css">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+        
         <script src="<?= base_url() ?>assets/frontend/vendor/js/sweetalert.js"></script>
         <script src="<?= base_url() ?>assets/frontend/vendor/js/jquery-3.3.1.slim.min.js"></script>
         <script src="<?= base_url() ?>assets/frontend/vendor/js/ajax.js"></script>
         <script src="<?= base_url() ?>assets/frontend/js/bootstrap.min.js"></script>
     </head>
 
-    <body>
-        <section class="section-wrapper">
-            <div class="container-fluid">
-
+    <body> 
    
 
 
