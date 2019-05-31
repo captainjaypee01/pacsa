@@ -84,127 +84,30 @@ var app_url = protocol + host + path;
         $("#btn-no-delegates").click(function(e){
             var val = $("#no-delegates").val();
             var school_id = window.school_id;
+            
             if(val > 1){
-                $("#section-reg2").show();
-                var html = `<form id="frm-batch-registration">`;
-                for(var i = 0; i < val; i++){
-                    html += `<div class="row justify-content-center align-items-center mt-5 mb-5">
-                                <div class="col-md-6 col-sm-8 align-self-center">
-                                    <div class="card">
-                                        <div class="card-header text-center">
-                                            <strong>
-                                                Delegate ` + (i + 1) + `
-                                            </strong>
-                                        </div><!--card-header-->
+                $.ajax({
+                    type: "POST",
+                    url: app_url + "/frontend/generateBatchForms",
+                    data: { total_delegates : val, school_id : school_id},
+                    dataType: "json",
+                    beforeSend:function(){
+                        $("#loading").show();
+                    },
+                    success: function(response){ 
                         
-                                        <div class="card-body"> 
-                                            <div class="row">
-                                                <div class="col-md-4 col-sm-12">
-                                                    <div class="form-group">
-                                                        <input type="text" name="first_name[]" placeholder="First name" class="form-control" required>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-4 col-sm-12">
-                                                    <div class="form-group">
-                                                        <input type="text" name="middle_name[]" placeholder="Middle name" class="form-control">
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-4 col-sm-12">
-                                                    <div class="form-group">
-                                                        <input type="text" name="last_name[]" placeholder="Last name" class="form-control" required>
-                                                    </div>
-                                                </div>
-                                            </div>
-                    
-                                            <div class="row">
-                                                <div class="col-md-6 col-sm-12">
-                                                    <div class="form-group">
-                                                        <input type="text" name="email[]" placeholder="Email Address" class="form-control" required>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6 col-sm-12">
-                                                    <div class="form-group">
-                                                        <input type="text" name="contact[]" placeholder="Contact Number" class="form-control" required>
-                                                    </div>
-                                                </div>
-                                            </div> 
-                    
-                                            <div class="row">
-                    
-                                                <div class="col-md-6 col-sm-12">
-                                                    <div class="form-group">
-                                                        <h6 class="pl-2 form-label_w">Shirt Size</h6>
-                                                        <select name="shirt_size[]" class="" required>
-                                                            <option value=""></option>
-                                                            <option value="XS">Extra Small</option>
-                                                            <option value="S">Small</option>
-                                                            <option value="M">Medium</option>
-                                                            <option value="L">Large</option>
-                                                            <option value="XL">Extra Large</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                    
-                                                <div class="col-md-6 col-sm-12">
-                                                    <div class="form-group">
-                                                        <h6 class="form-label_w">Gender</h6>
-                                                        <div class="form-check form-check-inline">
-                                                            <input class="form-check-input" type="radio" name="gender[` + i +`]" value="m">
-                                                            <label class="form-check-label" for="gender">Male</label>
-                                                        </div>
-                                                        <div class="form-check form-check-inline">
-                                                            <input class="form-check-input" type="radio" name="gender[` + i +`]" value="f">
-                                                            <label class="form-check-label" for="gender">Female</label>
-                                                        </div> 
-                                                    </div>
-                                                </div>
-                    
-                                            </div>
-                    
-                                            <div class="row">
-                    
-                                                <div class="col-md-6 col-sm-12">
-                                                    <div class="form-group">
-                                                        <h6 class="pl-2 form-label_w">Delegate Type</h6>
-                                                        <select name="delegate_type[]" id="delegate_type" class="" required>
-                                                            <option value=""></option>
-                                                            <option value="student">Student</option>
-                                                            <option value="adviser">Adviser</option> 
-                                                        </select>
-                                                    </div>
-                                                </div>
-                    
-                                                <div class="col-md-6 col-sm-12">
-                                                    <div class="form-group">
-                                                        <h6 class="form-label_w">Is Head Delegate?</h6>
-                                                        <div class="form-check form-check-inline">
-                                                            <input class="form-check-input" type="radio" name="is_head[` + i +`]" value="1">
-                                                            <label class="form-check-label" for="is_head">Yes</label>
-                                                        </div>
-                                                        <div class="form-check form-check-inline">
-                                                            <input class="form-check-input" type="radio" name="is_head[` + i +`]" value="0">
-                                                            <label class="form-check-label" for="is_head">No</label>
-                                                        </div> 
-                                                    </div>
-                                                </div>
-                    
-                                            </div> 
-                                        </div>
-                                    </div>  
-                                </div>
-                            </div>`;
-                }
-
-                html += `
+                        $("#loading").hide();
+                        $("#section-reg2").show();
+                        $("#section-reg2").html(response);
+    
+                    },
+                    error: function(response){
+                        console.log(response);
+                    }
+    
+                });
                 
-                    <input type="number" name="school_id" id="school_id2" value="`+ school_id + `" hidden>
-                    <div class="row">
-                        <div class="col mx-auto">
-                            <button type="submit" class="btn btn-warning ">Submit</button>
-                        </div>
-                    </div>
-                </form>`;
-                $("#section-reg2").html(html);
+                // $("#section-reg2").html(html);
             }
             else{
                 swal({ text: "Number of Delegates must be greater than 1", icon: "warning"});
@@ -218,6 +121,9 @@ var app_url = protocol + host + path;
                 type: "POST",
                 url: app_url + "/frontend/batch_registration",
                 data: formData,
+                beforeSend:function(){
+                    $("#loading").show();
+                },
                 dataType: "json",
                 success: function(response){
                     if(response.success){
@@ -233,7 +139,36 @@ var app_url = protocol + host + path;
                 error: function(response){
                     console.log(response);
                 }
-            })
+            });
+        });
+        $("#frm-registration").submit(function(e){
+            e.preventDefault();
+            var formData = $(this).serialize(); 
+            $.ajax({
+                type: "POST",
+                url: app_url + "/frontend/individualRegister",
+                data: formData,
+                beforeSend:function(){
+                    $("#loading").show();
+                },
+                dataType: "json",
+                success: function(response){
+                    
+                    $("#loading").hide();
+                    if(response.success){
+                        swal({ title: response.message, icon: "success" });                    
+                        $(this).trigger("reset");
+                        resetAll();
+                    }
+                    else{
+                        swal({ text: "Please Try Again!", icon: "warning"});
+                    }
+                    fetch_schools();
+                }, 
+                error: function(response){
+                    console.log(response);
+                }
+            });
         });
         function close_modals(){
             var modals = $('.modal'); 
