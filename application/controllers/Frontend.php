@@ -3,19 +3,29 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Frontend extends CI_Controller {
  
-    
+     
+    public function __construct(){
+        parent:: __construct();
+        date_default_timezone_set('Asia/Manila');
+
+	}
+	
 	public function index($page = null)
 	{
-		$page = $this->uri->segment(1) ?? 'index';
-		
-        if ( !file_exists('application/views/frontend/'.$page.'.php') ) {
-            show_404();
-        }
 		$this->load->view('frontend/layouts/header');
-        $this->load->view('frontend/'.$page);
+		$this->load->view('frontend/index');
+		$this->load->view('frontend/layouts/footer');
+		 
+         
+	}
+	public function register($page = null)
+	{ 
+		$this->load->view('frontend/layouts/header');
+		$this->load->view('frontend/register');
 		$this->load->view('frontend/layouts/footer');
          
 	}
+	
 	
 	public function fetch_schools(){
 		$search = $this->_post("search");
@@ -132,7 +142,8 @@ class Frontend extends CI_Controller {
 	public function generateBatchForms(){
 		$totalDelegates = $this->_post("total_delegates");
 		$school_id = $this->_post("school_id");
-		$html = '<form id="frm-batch-registration">';
+		$html = '
+		<div class="card-body"> <form id="frm-batch-registration">';
 			for($i = 0; $i < $totalDelegates; $i++){
 				$html .= '<div class="row justify-content-center align-items-center mt-5 mb-5">
 							<div class="col-md-6 col-sm-8 align-self-center">
@@ -243,13 +254,13 @@ class Frontend extends CI_Controller {
 
 			$html .= '
 			
-				<input type="number" name="school_id" id="school_id2" value="'. $school_id .'" hidden>
-				<div class="row">
-					<div class="col mx-auto">
-						<button type="submit" class="btn btn-warning ">Submit</button>
+				<div class="row justify-content-center align-items-center mt-5 mb-5">
+					<div class="col md-6 mx-auto text-center">
+						<input type="number" name="school_id" id="school_id2" value="'. $school_id .'" hidden>
+						<button type="submit" class="btn btn-success ">Submit</button>
 					</div>
 				</div>
-			</form>'; 
+			</form></div>'; 
 			echo json_encode($html);
 	}
 

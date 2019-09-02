@@ -60,7 +60,7 @@
                 <div class="row align-items-center text-center py-5">
                     <div class="col-lg-12">
                         <h1>REGISTRATION</h1>
-                        <button class="btn btn-warning mt-4">Register Now</button>
+                        <a href="<?= base_url() ?>register" class="btn btn-warning mt-4">Register Now</a>
                     </div>
                 </div>
             </div>

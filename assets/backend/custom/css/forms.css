@@ -1,0 +1,47 @@
+.submit_bib,
+.btn-warning{
+    font-family: 'adineue';
+}
+
+.form-label{
+    color: #ffc600;
+    font-family: 'adidasBlock';
+    font-size: 30px;
+    margin-bottom: 0px;
+}
+
+
+.section-wrapper .form-group select{
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid #ffc600;
+    font-family: 'fibre';
+    padding-bottom: 10px;
+    outline: 0;
+    width: 100%;
+}
+
+.section-wrapper .form-group .form-control {
+    background: transparent;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid #ffc600;
+    font-family: 'fibre';
+    outline: 0;
+}
+
+.section-wrapper .walk-in_wrapper .form-group .form-control,
+.section-wrapper .unpaid_wrapper .form-group .form-control{
+    color: #fff;
+}
+
+.section-wrapper .form-group .form-control option {
+    color: #0000 !important;
+}
+
+::placeholder,
+.form-check-label,
+.form-label_w {
+    color: #000 !important;
+    font-family: 'fibre';
+}

@@ -1,0 +1,79 @@
+.section1 h1,.section1 h2, 
+.section1 h3,
+.section1 h4, 
+.section1 h5{
+    color: #e3c01c;
+    text-shadow: 2px 3px #5f4724;
+}
+
+.section1 h6{
+    color: #e3c01c;
+    text-shadow: 1px 1px #5f4724;
+}
+
+.section1 h1{
+    font-size: 60px;
+}
+
+.section2 h1, .section2 h2,
+.section2 h3, .section2 h4{
+    color: #e3c01c;
+    text-shadow: 2px 3px #5f4724;
+}
+
+.section2 h5{
+    color: #e3c01c;
+    font-style: italic;
+}
+
+.section2 p,
+.section2 ol li{
+    color: #2E7D32;
+    font-weight: 600;
+}
+
+.section3 h1 {
+    color: #e3c01c;
+}
+
+.section3 button {
+    font-family: 'futura';
+    color: #fff;
+}
+
+.section4 h5, .section4 p{
+    color: #000;
+    font-family: 'futura';
+}
+
+
+
+
+/* Footer */
+.copyright p{
+    color: #e3c01c;
+    font-family: 'fibre';
+}
+
+footer h1{
+    color: #e3c01c;
+}
+
+footer h5, .section4 h5{
+    text-transform: uppercase;
+}
+
+footer a, footer a:hover{
+    color: #e3c01c;
+    text-decoration: none;
+}
+
+
+footer h5, footer p{
+    color: #fff;
+}
+
+footer .fa-facebook-square {
+    color: #fff;
+    font-size: 35px;
+}

@@ -1,0 +1,21 @@
+@font-face{
+    font-family: 'fibre';
+    src: url('../fonts/fibre-font.woff');
+}
+
+@font-face {
+    font-family: 'futura';
+    src: url('../fonts/FuturaHeavy.ttf');
+}
+
+h1{
+    font-family: 'fibre';
+}
+
+h2,h3,h4,h5,h6,
+p, button, th,td,tr{
+    font-family: 'futura';
+}
+
+
+

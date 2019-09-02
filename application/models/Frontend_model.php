@@ -36,12 +36,8 @@ class Frontend_model extends CI_Model {
     }
 
     function fetch_like($table, $columns = NULL, $like = NULL, $order = NULL){  
-        if($like !== NULL && $like != ""){
-            if($columns != NULL){
-                foreach($columns as $c){
-                    $this->db->like($c, $like, 'both');
-                }
-            }
+        if($like !== NULL && $like != ""){ 
+            $this->db->or_like($columns);
         }
         if($order !== NULL){
             $this->db->order_by($order, 'desc');
@@ -50,6 +46,19 @@ class Frontend_model extends CI_Model {
         return ($query->num_rows() > 0) ? $query->result() : false;
     }
 
+    function fetchPagination($table, $columns = NULL, $like = NULL, $order = NULL, $limit = NULL, $start = NULL){  
+        if($like !== NULL && $like != ""){
+            $this->db->or_like($columns);
+        }
+        if($order !== NULL){
+            $this->db->order_by($order, 'asc');
+        }
+        if($limit !== NULL && $start !== NULL){
+            $this->db->limit($limit, $start);
+        }
+        $query = $this->db->get($table);
+        return ($query->num_rows() > 0) ? $query->result() : false;
+    }
     
 
 

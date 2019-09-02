@@ -53,6 +53,3 @@ $route['default_controller'] = 'frontend';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
-
-$route["(:any)"] = "frontend";
-
